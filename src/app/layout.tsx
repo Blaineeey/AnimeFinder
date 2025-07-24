@@ -1,10 +1,8 @@
-// src/app/layout.tsx
-import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { AuthProvider } from "@/components/auth/auth-provider"
-import { UserMenu } from "@/components/auth/user-menu" // You'll create this
+import { UserMenu } from "@/components/auth/user-menu"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
