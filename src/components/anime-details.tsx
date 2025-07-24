@@ -4,8 +4,8 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { ArrowLeft, ExternalLink, Star, Calendar, Users, Clock, Award, Play, Heart } from "lucide-react"
 import { useAuth } from "@/components/auth/auth-provider"
-import { useFavorites } from "@/hooks/use-favorites"
-import AuthModal from "@/components/auth/auth-modal"
+import { useFavorites } from "@/hooks/useFavorites"
+import {AuthModal} from "@/components/auth/auth-modal"
 import AnimatedBackground from "@/components/animated-background"
 
 interface AnimeDetailsProps {

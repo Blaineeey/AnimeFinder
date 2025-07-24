@@ -6,9 +6,8 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Search, Film, Star, Calendar, Play, Heart, User } from "lucide-react"
 import { useAuth } from "@/components/auth/auth-provider"
-import { useFavorites } from "@/hooks/use-favorites"
-import AuthModal from "@/components/auth/auth-modal"
-import UserMenu from "@/components/auth/user-menu"
+import { useFavorites } from "@/hooks/useFavorites"
+import {AuthModal} from "@/components/auth/auth-modal"
 import AnimatedBackground from "@/components/animated-background"
 
 export default function AnimeTypeahead() {
@@ -113,19 +112,6 @@ export default function AnimeTypeahead() {
               <p className="hero-subtitle">
                 Search through thousands of anime titles and discover your next binge-worthy series
               </p>
-            </div>
-            <div className="flex items-center gap-4">
-              {user ? (
-                <UserMenu />
-              ) : (
-                <button
-                  onClick={() => setShowAuthModal(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-filter backdrop-blur-xl border border-white/20 rounded-xl text-white hover:bg-white/20 transition-all duration-200"
-                >
-                  <User className="w-4 h-4" />
-                  Sign In
-                </button>
-              )}
             </div>
           </div>
         </div>
