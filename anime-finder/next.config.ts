@@ -7,6 +7,14 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.myanimelist.net",
+        port: "",
+        pathname: "/**",
+      },
+    ],
     domains: ["cdn.myanimelist.net"],
     unoptimized: true,
   },
